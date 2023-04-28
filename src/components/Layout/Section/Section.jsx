@@ -2,9 +2,21 @@ import styled, { css } from 'styled-components';
 
 const Section = styled.section`
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
   padding-top: 50px;
   padding-bottom: 50px;
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #2a2a2a;
+  }
 
   ${({ grey }) =>
     grey &&

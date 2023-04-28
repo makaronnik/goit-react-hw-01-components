@@ -7,6 +7,7 @@ export const App = () => {
   return (
     <Container>
       <Section grey bordered>
+        <h1>{'<Profile>'}</h1>
         <Profile {...user} />
       </Section>
     </Container>
