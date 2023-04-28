@@ -6,7 +6,7 @@ import user from './../data/user.json';
 export const App = () => {
   return (
     <Container>
-      <Section>
+      <Section grey bordered>
         <Profile {...user} />
       </Section>
     </Container>

@@ -8,7 +8,9 @@ const StatsItem = ({ label, quantity }) => {
   return (
     <StatsItemStyled>
       <span className="label">{labelNormalized}</span>
-      <span className="quantity">{quantity}</span>
+      <span className="quantity">
+        {Number.parseInt(quantity).toLocaleString('en-US')}
+      </span>
     </StatsItemStyled>
   );
 };
