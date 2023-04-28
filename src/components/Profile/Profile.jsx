@@ -1,6 +1,6 @@
+import Stats from './Stats/Stats';
 import Description from './Description/Description';
 import ProfileStyled from './ProfileStyled';
-import Stats from './Stats/Stats';
 
 const Profile = ({ stats, ...description }) => {
   return (

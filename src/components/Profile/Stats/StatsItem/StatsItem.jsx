@@ -1,6 +1,8 @@
 import StatsItemStyled from './StatsItemStyled';
 
-export const StatsItem = ({ label, quantity }) => {
+import PropTypes from 'prop-types';
+
+const StatsItem = ({ label, quantity }) => {
   const labelNormalized = label[0].toUpperCase() + label.slice(1);
 
   return (
@@ -10,3 +12,10 @@ export const StatsItem = ({ label, quantity }) => {
     </StatsItemStyled>
   );
 };
+
+StatsItem.propTypes = {
+  label: PropTypes.string.isRequired,
+  quantity: PropTypes.number.isRequired,
+};
+
+export default StatsItem;
