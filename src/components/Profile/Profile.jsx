@@ -2,11 +2,11 @@ import Description from './Description/Description';
 import ProfileStyled from './ProfileStyled';
 import Stats from './Stats/Stats';
 
-const Profile = () => {
+const Profile = ({ stats, ...description }) => {
   return (
     <ProfileStyled>
-      <Description></Description>
-      <Stats></Stats>
+      <Description {...description}></Description>
+      <Stats {...stats}></Stats>
     </ProfileStyled>
   );
 };

@@ -1,12 +1,15 @@
 import { StatsItem } from './StatsItem/StatsItem';
 import StatsStyled from './StatsStyled';
 
-const Stats = () => {
+const Stats = props => {
+  const keys = Object.keys(props);
+  const values = Object.values(props);
+
   return (
     <StatsStyled>
-      <StatsItem></StatsItem>
-      <StatsItem></StatsItem>
-      <StatsItem></StatsItem>
+      {keys.map((key, index) => (
+        <StatsItem key={key} label={key} quantity={values[index]} />
+      ))}
     </StatsStyled>
   );
 };

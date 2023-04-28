@@ -1,16 +1,12 @@
 import DescriptionStyled from './DescriptionStyled';
 
-const Description = () => {
+const Description = ({ username, tag, location, avatar }) => {
   return (
     <DescriptionStyled>
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-        alt="User avatar"
-        class="avatar"
-      />
-      <p class="name">Petra Marica</p>
-      <p class="tag">@pmarica</p>
-      <p class="location">Salvador, Brasil</p>
+      <img src={avatar} alt={username + ' avatar'} className="avatar" />
+      <p className="name">{username}</p>
+      <p className="tag">@{tag}</p>
+      <p className="location">{location}</p>
     </DescriptionStyled>
   );
 };

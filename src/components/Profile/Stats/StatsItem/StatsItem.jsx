@@ -1,10 +1,12 @@
 import StatsItemStyled from './StatsItemStyled';
 
-export const StatsItem = () => {
+export const StatsItem = ({ label, quantity }) => {
+  const labelNormalized = label[0].toUpperCase() + label.slice(1);
+
   return (
     <StatsItemStyled>
-      <span class="label">Followers</span>
-      <span class="quantity">1000</span>
+      <span className="label">{labelNormalized}</span>
+      <span className="quantity">{quantity}</span>
     </StatsItemStyled>
   );
 };
