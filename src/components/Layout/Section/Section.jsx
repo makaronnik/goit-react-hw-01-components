@@ -29,11 +29,14 @@ const Section = styled.section`
       background-color: #e2e2e2;
     `}
 
-  ${({ bordered }) =>
-    bordered &&
-    css`
-      border-bottom: 1px dashed #fff;
-    `}
+  ${({ bordered, grey }) =>
+    bordered && grey
+      ? css`
+          border-bottom: 1px dashed #fff;
+        `
+      : css`
+          border-bottom: 1px dashed #e2e2e2;
+        `}
 `;
 
 Section.propTypes = {

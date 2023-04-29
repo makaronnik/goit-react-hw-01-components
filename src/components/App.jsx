@@ -3,9 +3,11 @@ import Section from './Layout/Section/Section';
 import FriendList from './FriendList/FriendList';
 import Profile from './Profile/Profile';
 import Statistics from './Statistics/Statistics';
+import TransactionHistory from './TransactionHistory/TransactionHistory';
 import user from './../data/user.json';
 import data from './../data/data.json';
 import friends from './../data/friends.json';
+import transactions from './../data/transactions.json';
 
 export const App = () => {
   return (
@@ -27,6 +29,10 @@ export const App = () => {
       <Section>
         <h1>{'<FriendList>'}</h1>
         <FriendList friends={friends} />
+      </Section>
+      <Section>
+        <h1>{'<TransactionHistory>'}</h1>
+        <TransactionHistory items={transactions} />
       </Section>
     </Container>
   );
