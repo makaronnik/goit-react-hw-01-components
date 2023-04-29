@@ -8,7 +8,13 @@ export const App = () => {
     <Container>
       <Section grey bordered>
         <h1>{'<Profile>'}</h1>
-        <Profile {...user} />
+        <Profile
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
+        />
       </Section>
     </Container>
   );
