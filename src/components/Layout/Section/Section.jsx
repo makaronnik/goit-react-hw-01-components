@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 const Section = styled.section`
@@ -8,12 +9,16 @@ const Section = styled.section`
 
   gap: 20px;
 
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 
   h1 {
+    margin: 0;
+    margin-bottom: 30px;
+
     font-size: 32px;
     font-weight: 700;
+    line-height: 0;
 
     color: #2a2a2a;
   }
@@ -30,5 +35,10 @@ const Section = styled.section`
       border-bottom: 1px dashed #fff;
     `}
 `;
+
+Section.propTypes = {
+  grey: PropTypes.bool,
+  bordered: PropTypes.bool,
+};
 
 export default Section;
